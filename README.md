@@ -1,4 +1,5 @@
-# Project Bootstrap 5 Modal using vanilla javascript
+# Project: Bootstrap 5 Modal
+Modal made with bootstrap 5 using vanilla javascript (#iceicebaby) no jQuery.
 
 ## Function
 **Onload**
