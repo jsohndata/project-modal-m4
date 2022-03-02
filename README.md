@@ -10,7 +10,7 @@ Modal made with bootstrap 5 using vanilla javascript (#iceicebaby) no jQuery.
 - Unblur the background
 
 ## Note
-I am working on cultivating my javascript. Therefore, I welcome any feedback, suggestion, and funny internet meme.
+I am working on cultivating my javascript and bootstrap. Therefore, I welcome any feedback, suggestion, and funny internet meme.
 
 ## Demo
 https://339.blue/bootstrap5-modal
