@@ -1,0 +1,11 @@
+/* Blur On */
+.blur-on { 
+	filter: blur(5px);
+	-webkit-filter: blur(5px); 
+}
+
+/* Blur Off */
+.blur-off { 
+	filter: blur(0px);
+	-webkit-filter: blur(0px); 
+}
