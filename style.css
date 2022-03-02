@@ -1,14 +1,29 @@
 /* Vanity CSS */
-body { background: #f4f5f6; }
 /* *********************** */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans&display=swap');
 
-/* Blur On */
+html { 
+	background-image: linear-gradient(to right bottom, #333399, #3e49aa, #4b5fb9, #5b75c8, #6c8bd6, #7591e1, #7e98ec, #889ef7, #9494ff, #a687ff, #bd76ff, #d75ffb);
+	background-size: cover;
+  	height: 100%; }
+
+body {background-color: rgba(255, 255, 255, 0.0)}
+
+h1 	 { font-family: 'Montserrat', sans-serif; }
+
+a:link, 
+a:visited { font-family: 'Work Sans', sans-serif; }
+
+h1, a:link, a:visited { color: #f4f5f6; }
+
+
+/* For Modal */
+/* *********************** */
 .blur-on { 
 	filter: blur(5px);
 	-webkit-filter: blur(5px); 
 }
 
-/* Blur Off */
 .blur-off { 
 	filter: blur(0px);
 	-webkit-filter: blur(0px); 
