@@ -1,4 +1,4 @@
-// Create var
+// Create const
 const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
 keyboard: true  });
 
@@ -26,15 +26,11 @@ function blurOff() {
 
 // Onload ... 
 window.addEventListener('load', (event) => {
-    if (popModalLoad() )  { console.log('modal => 1'); }
-    else                  { console.log('modal => 0'); }
-
-    if (blurOn() )  { console.log('blur-on => 1'); }
-    else            { console.log('blur-on => 0'); }
+    popModalLoad() ? console.log('modal => 1') : console.log('modal => 0')
+    blurOn()       ? console.log('blur-on => 1') : console.log('blur-on => 0')
 });        
 
 // When the modal close ... 
 window.addEventListener('hidden.bs.modal', (event) => {
-    if (blurOff() ) { console.log('blur-off => 1'); }
-    else            { console.log('blur-off => 0'); }
+    blurOff() ? console.log('blur-off => 1') : console.log('blur-off => 0')
 });
