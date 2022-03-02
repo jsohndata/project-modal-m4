@@ -15,5 +15,4 @@ I am working on cultivating my javascript and bootstrap. Therefore, I welcome an
 ## Demo
 https://339.blue/bootstrap5-modal
 
-##### First Commit
-1646187665
+##### First Commit: 1646187665
