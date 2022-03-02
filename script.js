@@ -1,7 +1,7 @@
 // Create const
 const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
-keyboard: true  });
-
+    keyboard: true  
+});
 
 
 // Load the modal
