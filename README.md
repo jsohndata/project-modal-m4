@@ -1,9 +1,12 @@
 # Project Bootstrap 5 Modal using vanilla javascript
 
 ## Function
-- Onload, pop up the Modal
+**Onload**
+- Pop up the modal
 - Blur the background
-- When closing the modal, unblur the background
+
+**Close**
+- Unblur the background
 
 ## Note
 I welcome any feedback, suggestion, and funny internet meme.
