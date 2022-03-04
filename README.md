@@ -1,4 +1,4 @@
-# Project: Bootstrap 5 Modal
+# Project: Modal M4
 Modal made with Bootstrap 5 using vanilla javascript (#iceicebaby) no jQuery.
 
 ## Function
