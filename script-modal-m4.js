@@ -10,8 +10,6 @@ const passVarArray = passVarValue.split(",");
 const elementID     = passVarArray[0];
 const keyboardState = Boolean(passVarArray[1]);
 
-alert (keyboardState);
-
 // Const for Modal
 const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
     keyboard: keyboardState  
