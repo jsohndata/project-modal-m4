@@ -5,12 +5,6 @@
 // Button
 const buttonModal = document.querySelector('#buttonModal');
 
-// Modal
-const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
-    keyboard: keyboardState  
-});
-
-
 /*  Create Var > Parse Data-Search  */
 /* ************************************* */
 const passVarName  = document.getElementById('passVar');
@@ -22,6 +16,11 @@ const passVarArray = passVarValue.split(",");
 // Assign the value to variables
 const elementID     = passVarArray[0];
 const keyboardState = Boolean(passVarArray[1]);
+
+// Modal
+const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
+    keyboard: keyboardState  
+});
 
 
 
