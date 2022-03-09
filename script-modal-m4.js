@@ -1,3 +1,27 @@
+/*  Note: blurEffect () */
+/* ************************************* */
+// Set Blur... On or Off
+//
+// [1] elementFilter: Blur state
+//      => blur-on, blur-off
+// [2] elementTarget: Class or ID to blur when modal is acticvated
+// [3] elementSource: Source where the request is coming from.
+//      => onLoad, button, close
+// [4] stateConsoleLog:  Boolean
+// [5] stateDebug:      Boolean
+
+
+// Clean up Class
+/* See Note above */
+/* ************************************* */
+// Clear some of the class
+//
+// [1] elementTarget: Target element for the class to be reset
+// [5] stateDebug:      Boolean
+
+function cleanUpClass(elementTarget, stateDebug) {
+
+
 
 /*  Create Var */
 /* ************************************* */
@@ -23,19 +47,18 @@ const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
 });
 
 
-
-
 /*  Function */
 /* ************************************* */
 
 // ConsoleLog
-function consoleLog2600 (consoleEmoji, consoleLabel, consoleValue) {
+function consoleLog (consoleEmoji, consoleLabel, consoleValue) {
     console.log(
         consoleEmoji 
         + ' ' 
         + consoleLabel
         + ' => '
         + consoleValue);
+    return true;
 }
 
 // Debugger Session K&D
@@ -46,7 +69,6 @@ function bugPowderDust (debugSource, debugThis) {
         + 'function =>' + debugSource 
         + '\n' 
         + 'This =>' + debugThis);
-    
     return true;
 }
 
@@ -55,61 +77,53 @@ function loadModal (elementSource, stateConsoleLog, stateDebug) {
     popModal.show();
 
 // Console Log 
-    stateConsoleLog > 0 ? consoleLog2600('👍🏾', elementSource, 'modal') : null;
-    
+    stateConsoleLog > 0 ? consoleLog('👍🏾', elementSource, 'modal') : null;
     return true;
 }
 
-// Function: Set Blur... On or Off
-// [1] elementFilter: Blur state
-//      => blur-on, blur-off
-// [2] elementTarget: Class or ID to blur when modal is acticvated
-// [3] elementSource: Source where the request is coming from.
-//      => onLoad, button, close
-// [4] stateConsoleLog:  Boolean
-// [5] stateDebug:      Boolean
-
-function blurElement(elementFilter, elementTarget, elementSource, stateConsoleLog, stateDebug) {
+//  Blur Effect
+/* See Note above */
+function blurEffect(elementFilter, elementTarget, elementSource, stateConsoleLog, stateDebug) {
     // Create var
     let blurClassList = document.querySelector(elementTarget).classList;
 
     // Add class
     blurClassList.add(elementFilter);
 
-    // Console Log 
-    stateConsoleLog > 0 ? consoleLog2600('👍🏾', elementSource, elementFilter) : null;
-    
-    // Debugger
-    stateDebug > 0 ? bugPowderDust('blur', blurClassList) : null;
+    // Console Log + Debugger
+    stateConsoleLog > 0 ? consoleLog('👍🏾', elementSource, elementFilter) : null;
+    stateDebug      > 0 ? bugPowderDust('blur', blurClassList) : null;
 }
 
 // Clean up Class
+/* See Note above */
 function cleanUpClass(elementTarget, stateDebug) {
+
     // Create var
     let targetClassList = document.querySelector(elementTarget).classList;
     
+    // Remove class
     targetClassList.remove ('blur-off');
     targetClassList.remove ('blur-on');
 
-     // debugger
+     // Degguer
      stateDebug > 0 ? bugPowderDust('blur', targetClassList) : null;
 }
 
 
-
-
 /*  Event */
 /* ************************************* */
+
 // Onload
 window.addEventListener('load', () => { 
     loadModal('onload',0,0); 
-    blurElement('blur-on','#header','onload',0,0);
+    blurEffect('blur-on','#header','onload',0,0);
 });        
 
 
 // When the modal close
 window.addEventListener('hidden.bs.modal', () => { 
-    blurElement('blur-off','#header','close',0,0);
+    blurEffect('blur-off','#header','close',0,0);
     cleanUpClass ('#header',0,0);
 });
 
@@ -117,5 +131,5 @@ window.addEventListener('hidden.bs.modal', () => {
 // Button click
 buttonModal.addEventListener('click', () => { 
     loadModal('button'); 
-    blurElement('blur-on','#header','button',0,0); 
+    blurEffect('blur-on','#header','button',0,0); 
 });
