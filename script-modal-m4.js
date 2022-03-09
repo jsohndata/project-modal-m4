@@ -11,15 +11,14 @@
 // [5] stateDebug:      Boolean
 
 
-// Clean up Class
-/* See Note above */
+// Note: Clean up Class
 /* ************************************* */
-// Clear some of the class
+// Clear some of the class such as removing class after adding.
 //
 // [1] elementTarget: Target element for the class to be reset
 // [5] stateDebug:      Boolean
 
-function cleanUpClass(elementTarget, stateDebug) {
+
 
 
 
@@ -34,11 +33,13 @@ const buttonModal = document.querySelector('#buttonModal');
 const passVarName  = document.getElementById('passVar');
 const passVarValue = passVarName.getAttribute("data-search");
 
-// Split string using comma
+// Split string using comma and put into an arry
 const passVarArray = passVarValue.split(",");
 
 // Assign the value to variables
 const elementID     = passVarArray[0];
+
+// Convert string into a boolean object
 const keyboardState = Boolean(passVarArray[1]);
 
 // Modal
@@ -76,7 +77,7 @@ function bugPowderDust (debugSource, debugThis) {
 function loadModal (elementSource, stateConsoleLog, stateDebug) {
     popModal.show();
 
-// Console Log 
+    // Console Log 
     stateConsoleLog > 0 ? consoleLog('👍🏾', elementSource, 'modal') : null;
     return true;
 }
@@ -93,6 +94,7 @@ function blurEffect(elementFilter, elementTarget, elementSource, stateConsoleLog
     // Console Log + Debugger
     stateConsoleLog > 0 ? consoleLog('👍🏾', elementSource, elementFilter) : null;
     stateDebug      > 0 ? bugPowderDust('blur', blurClassList) : null;
+    return true;
 }
 
 // Clean up Class
@@ -106,8 +108,9 @@ function cleanUpClass(elementTarget, stateDebug) {
     targetClassList.remove ('blur-off');
     targetClassList.remove ('blur-on');
 
-     // Degguer
+     // Debugger
      stateDebug > 0 ? bugPowderDust('blur', targetClassList) : null;
+     return true;
 }
 
 
